@@ -29,11 +29,19 @@
                         </div>
                         <p class="text-sm font-medium text-gray-900">${{$item->price}}</p>
                     </div>
-                    <form class="flex flex-col items-center justify-center p-4" id="form-{{$item->id}}">
-                    @csrf
-                                <input type="number" name="quantity" value="1" min="1" class="mb-2 w-20 border border-gray-300 rounded-md px-3 py-2 text-sm">
-                                <input type="submit" value="Add"class="px-4 py-2 bg-indigo-500 border border-transparent rounded-md font-medium text-xs text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                    <form>
+                        @csrf
+                    <div class="row justify-center mx-2 my-2 ">
+                        <div class="col-md-4">
+                            <input type="number" name="quantity" value="1" min="1" class="mb-2 w-20 h-8 border border-gray-300 rounded-md px-3 py-2 text-sm">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="submit" value="Add"class="h-8 px-4 py-2 bg-indigo-500 border border-transparent rounded-md font-medium text-xs text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                    
+                        </div>
+                    </div>
                     </form>
+                
                 </div>
                 @endforeach
             </div>
